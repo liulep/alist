@@ -1,0 +1,32 @@
+<!--延迟加载-->
+<div id="customize" style="display: none;">
+  <div>
+    <center class="dibu">
+      <div style="font-size: 16px;">
+        <!--添加计数器-->
+        <span class="nav-item">
+          <span>本网盘总访问量<span style="color: red;" id="busuanzi_value_site_pv"></span>次</span>
+        </span>
+        <br/>
+      <!--添加备案信息-->
+      <span class="nav-item">
+        <a class="nav-link" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
+          <i class="fa-solid fa-shield-check" style="color:#409EFF;" aria-hidden="true">
+          </i>
+          ©2023 liulep · 湘ICP备2022008118号
+        </a>
+      </span>
+    </center>
+    <br />
+    <br />
+  </div>
+</div>
+<!--延迟加载配套使用JS-->
+<script>
+  let interval = setInterval(() => {
+    if (document.querySelector(".footer")) {
+      document.querySelector("#customize").style.display = "";
+      clearInterval(interval);
+    }
+  }, 200);
+</script>
