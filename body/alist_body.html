@@ -1,32 +1,88 @@
-<!--延迟加载-->
-<div id="customize" style="display: none;">
-  <div>
-    <center class="dibu">
-      <div style="font-size: 16px;">
-        <!--添加计数器-->
-        <span class="nav-item">
-          <span>本网盘总访问量<span style="color: red;" id="busuanzi_value_site_pv"></span>次</span>
-        </span>
-        <br/>
-      <!--添加备案信息-->
-      <span class="nav-item">
-        <a class="nav-link" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
-          <i class="fa-solid fa-shield-check" style="color:#409EFF;" aria-hidden="true">
-          </i>
-          ©2023 liulep · 湘ICP备2022008118号
-        </a>
-      </span>
-    </center>
-    <br />
-    <br />
-  </div>
-</div>
-<!--延迟加载配套使用JS-->
-<script>
-  let interval = setInterval(() => {
-    if (document.querySelector(".footer")) {
-      document.querySelector("#customize").style.display = "";
-      clearInterval(interval);
-    }
-  }, 200);
-</script>
+ <!--延迟加载-->
+ <div id="customize" style="display: none;">
+   <div>
+     <br />
+     <br />
+     <div class="box">
+       <div class="divstyle">
+         <span class="nav-item">
+           <a id="github" class="nav-link item" href="https://github.com/liulep" target="_blank">
+             GitHub
+           </a>
+         </span>
+       </div>
+       |
+       <div class="divstyle">
+         <span class="nav-item">
+           <a id="email" class="nav-link item" href="mailto:2422669375@qq.com" target="_blank">
+             邮箱
+           </a>
+         </span>
+       </div>
+       |
+       <div class="divstyle">
+         <span class="nav-item">
+           <a id="yunpan" class="nav-link item" href="http://pan.liulep.com" target="_self">
+             云盘
+           </a>
+         </span>
+       </div>
+       |
+       <div class="divstyle">
+         <!--后台入口-->
+         <span class="nav-item">
+           <a id="change" class="nav-link item" href="/@manage" target="_self">
+             管理
+           </a>
+         </span>
+       </div>
+       |
+       <div class="divstyle">
+         <!--版权，请尊重作者-->
+         <span class="nav-item">
+           <a id="alist" class="nav-link item" href="https://github.com/Xhofe/alist" target="_blank">
+             Alist
+           </a>
+         </span>
+       </div>
+       <br />
+       <br />
+       <div>
+         <!--添加备案信息-->
+         <span class="nav-item">
+           <a class="nav-link" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
+             ©2023 liulep · 湘ICP备2022008118号
+           </a>
+         </span>
+       </div>
+       <br />
+       <br />
+     </div>
+   </div>
+   <!--延迟加载配套使用JS-->
+   <script>
+     flush();
+     // $("#customize").attr("style", "")
+     $("#change").click(function() {
+       var url = window.location.pathname;
+       if (str.indexOf("@manage") !== -1) {
+         $("#customize").attr("style", "display:none")
+       }
+     })
+
+     function flush() {
+       let interval = setInterval(() => {
+         if ($("[class='footer hope-stack hope-c-dhzjXW hope-c-PJLV hope-c-PJLV-ihQbspH-css']").length > 0) {
+           $("#customize").attr("style", "")
+           if (localStorage.getItem('token') == '' || localStorage.getItem('token') == undefined) {
+             $("#change").html("登录");
+             $("#change").attr("href", "/@login");
+           } else {
+             $("#change").html("管理");
+             $("#change").attr("href", "/@manage");
+           }
+           clearInterval(interval);
+         }
+       }, 200);
+     }
+   </script>

@@ -1,4 +1,59 @@
-<!--Alist V3默认添加-->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.replaceAll"></script>
-<!--计数器-->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <!--Alist V3默认添加-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.replaceAll"></script>
+    <!--jQuery-->
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <style>
+      /*去掉底部*/
+      .footer {
+        display: none !important;
+      }
+
+      .box {
+        text-align: center;
+        width: 100%;
+        height: 50px;
+      }
+
+      .item {
+        padding: 5px 10px;
+        font-size: 16px;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .item:after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 4px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgb(24, 144, 255);
+        transition: all 0.3s;
+      }
+      .divstyle {
+        display: inline-block;
+        border:4px solid transparent;
+        transition: all 0.1s;
+      }
+      .divstyle:hover {
+        display: inline-block;
+        bottom: none;
+        transition: all 0.3s;
+      }
+      .item:hover:after {
+        display: block;
+        content: '';
+        width: 80%;
+        height: 4px;
+        background-color: rgb(24, 144, 255);
+        transition: all 0.3s;
+      }
+      .item:hover {
+        font-size: 20px;
+        transition: all 0.3s;
+      }
+    </style>
