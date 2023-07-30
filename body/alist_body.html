@@ -1,59 +1,68 @@
 <!--延迟加载-->
 <!--如果要写自定义内容建议都加到这个延迟加载的范围内-->
 <div id="customize" style="display: none;">
-    <div>
-        <center class="dibu">
-            <div style="font-size: 16px;">
-                <span class="nav-item">
-                    <a class="nav-link" href="mailto:2422669375@qq.com" target="_blank">
-                        <i class="fa-duotone fa-envelope-open" style="color:#409EFF" aria-hidden="true">
-                        </i>
-                        邮箱 |
-                    </a>
-                </span>
-                <span class="nav-item">
-                    <a class="nav-link" href="https://github.com/liulep" target="_blank">
-                        <i class="fas fa-edit" style="color:#409EFF" aria-hidden="true">
-                        </i>
-                        github |
-                    </a>
-                </span>
-                <span class="nav-item">
-                    <a class="nav-link" href="http://pan.liulep.com" target="_blank">
-                        <i class="fa fa-cloud-download" style="color:#409EFF;" aria-hidden="true">
-                        </i>
-                        云盘 |
-                    </a>
-                </span>
-                <!--后台入口-->
-                <span class="nav-item">
-                    <a class="nav-link" href="/@manage" target="_blank">
-                        <i class="fa-solid fa-folder-gear" style="color:#409EFF;" aria-hidden="true">
-                        </i>
-                        管理 |
-                    </a>
-                </span>
-                <!--版权，请尊重作者-->
-                <span class="nav-item">
-                    <a class="nav-link" href="https://github.com/Xhofe/alist" target="_blank">
-                        <i class="fa-solid fa-copyright" style="color:#409EFF;" aria-hidden="true">
-                        </i>
-                        Alist
-                    </a>
-                </span>
-            </div>
-        </center>
-        <br />
-        <br />
-    </div>
-<!--延迟加载范围到这里结束-->
+  <div>
+    <center class="dibu">
+      <div style="font-size: 16px;">
+        <span class="nav-item">
+          <a class="nav-link" href="mailto:2422669375@qq.com" target="_blank">
+            <i class="fa-duotone fa-envelope-open" style="color:#409EFF" aria-hidden="true">
+            </i>
+            邮箱 |
+          </a>
+        </span>
+        <span class="nav-item">
+          <a class="nav-link" href="https://github.com/liulep" target="_blank">
+            <i class="fas fa-edit" style="color:#409EFF" aria-hidden="true">
+            </i>
+            github |
+          </a>
+        </span>
+        <span class="nav-item">
+          <a class="nav-link" href="http://pan.liulep.com" target="_blank">
+            <i class="fa fa-cloud-download" style="color:#409EFF;" aria-hidden="true">
+            </i>
+            云盘 |
+          </a>
+        </span>
+        <!--后台入口-->
+        <span class="nav-item">
+          <a class="nav-link" href="/@manage" target="_blank">
+            <i class="fa-solid fa-folder-gear" style="color:#409EFF;" aria-hidden="true">
+            </i>
+            管理 |
+          </a>
+        </span>
+        <!--版权，请尊重作者-->
+        <span class="nav-item">
+          <a class="nav-link" href="https://github.com/Xhofe/alist" target="_blank">
+            <i class="fa-solid fa-copyright" style="color:#409EFF;" aria-hidden="true">
+            </i>
+            Alist
+          </a>
+        </span>
+      </div>
+      <br />
+      <!--添加备案信息-->
+      <span class="nav-item">
+        <a class="nav-link" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
+          <i class="fa-solid fa-shield-check" style="color:#409EFF;" aria-hidden="true">
+          </i>
+          ©2023 liulep · 湘ICP备2022008118号
+        </a>
+      </span>
+    </center>
+    <br />
+    <br />
+  </div>
+  <!--延迟加载范围到这里结束-->
 </div>
 <!--延迟加载配套使用JS-->
 <script>
-    let interval = setInterval(() => {
-        if (document.querySelector(".footer")) {
-            document.querySelector("#customize").style.display = "";
-            clearInterval(interval);
-        }
-    }, 200);
+  let interval = setInterval(() => {
+    if (document.querySelector(".footer")) {
+      document.querySelector("#customize").style.display = "";
+      clearInterval(interval);
+    }
+  }, 200);
 </script>
