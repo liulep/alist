@@ -40,7 +40,7 @@ document.writeln("       |");
 document.writeln("       <div class=\"divstyle\">");
 document.writeln("         <!--版权，请尊重作者-->");
 document.writeln("         <span class=\"nav-item\">");
-document.writeln("           <a id=\"alist\" class=\"nav-link item\" href=\"https://github.com/Xhofe/alist\" target=\"_blank\">");
+document.writeln("           <a id=\"博客\" class=\"nav-link item\" href=\"https://blog.liulep.com\" target=\"_blank\">");
 document.writeln("             Alist");
 document.writeln("           </a>");
 document.writeln("         </span>");
